@@ -1,0 +1,163 @@
+QCalendarWidget QWidget {
+    background-color: #BC4A3C;
+}
+
+/* style for top navigation area ###############################################*/
+
+#qt_calendar_navigationbar {
+    background-color: #fff;
+	border: 2px solid  #BC4A3C;
+	border-bottom: 0px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+/* style for month change buttons ############################################ */
+
+#qt_calendar_prevmonth,
+#qt_calendar_nextmonth {
+	/* border delete */
+    border: none;
+    /* delete default icons */
+	qproperty-icon: none;
+
+    min-width: 13px;
+    max-width: 13px;
+    min-height: 13px;
+    max-height: 13px;
+
+    border-radius: 5px;
+	/* set background transparent */
+    background-color: transparent;
+	padding: 5px;
+}
+
+/* style for pre month button ############################################ */
+
+#qt_calendar_prevmonth {
+	/* set text for button */
+	/*qproperty-text: &quot;&gt;&quot;;*/
+	margin-left:5px;
+	image: url("icon/arrow-119-48.ico");
+}
+
+/* style for next month button ########################################### */
+#qt_calendar_nextmonth {
+	margin-right:5px;
+	image: url("icon/arrow-19-48.ico");
+    /* qproperty-text: &quot;&gt;&quot;; */
+}
+#qt_calendar_prevmonth:hover,
+#qt_calendar_nextmonth:hover {
+    background-color: #df877c;
+}
+
+#qt_calendar_prevmonth:pressed,
+#qt_calendar_nextmonth:pressed {
+    background-color: #BC4A3C;
+}
+
+
+/* Style for month and year buttons #################################### */
+
+#qt_calendar_yearbutton {
+    color: #000;
+	margin:5px;
+    border-radius: 5px;
+	font-size: 13px;
+	padding:0px 10px;
+}
+
+ #qt_calendar_monthbutton {
+	width: 110px;
+    color: #000;
+	font-size: 13px;
+	margin:5px 0px;
+    border-radius: 5px;
+	padding:0px 2px;
+}
+
+#qt_calendar_yearbutton:hover,
+#qt_calendar_monthbutton:hover {
+    background-color: #df877c;
+}
+
+#qt_calendar_yearbutton:pressed,
+#qt_calendar_monthbutton:pressed {
+    background-color: #BC4A3C;
+}
+
+/* Style for year input lineEdit ######################################*/
+
+#qt_calendar_yearedit {
+    min-width: 53px;
+    color: #000;
+    background: transparent;
+	font-size: 13px;
+}
+
+/* Style for year change buttons ######################################*/
+
+#qt_calendar_yearedit::up-button {
+	image: url("icon/arrow-151-48.ico");
+    subcontrol-position: right;
+}
+
+#qt_calendar_yearedit::down-button {
+	image: url("icon/arrow-213-48.ico");
+    subcontrol-position: left;
+}
+
+#qt_calendar_yearedit::down-button,
+#qt_calendar_yearedit::up-button {
+	width:10px;
+	padding: 0px 5px;
+	border-radius:3px;
+}
+
+#qt_calendar_yearedit::down-button:hover,
+#qt_calendar_yearedit::up-button:hover {
+	background-color: #df877c;
+}
+
+/* Style for month select menu ##################################### */
+
+#calendarWidget QToolButton QMenu {
+     background-color: #BC4A3C;
+
+}
+#calendarWidget QToolButton QMenu::item {
+	/*padding: 10px;*/
+}
+ #calendarWidget QToolButton QMenu::item:selected:enabled {
+    background-color: #df877c;
+}
+
+#calendarWidget QToolButton::menu-indicator {
+	/* Remove toolButton arrow */
+      /*image: none; */
+	nosubcontrol-origin: margin;
+	subcontrol-position: right center;
+	margin-top: 10px;
+	width:20px;
+}
+
+/* Style for calendar table ########################################## */
+#qt_calendar_calendarview {
+	/* Remove the selected dashed box */
+    outline: 0px;
+
+	border: 2px solid  #BC4A3C;
+	border-top: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+QTableView {
+    selection-background-color: #df877c;
+}
+
+QCalendarWidget QTableView QLabel
+{
+    color: "white";
+}
