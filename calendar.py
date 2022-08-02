@@ -1,6 +1,4 @@
-from PyQt5 import QtCore
 from PyQt5.QtCore import QDate, Qt, QPoint
-from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QCalendarWidget
 
 
@@ -10,11 +8,9 @@ class Scheduler(QCalendarWidget):
         self.initUI()
 
     def initUI(self):
-        _color = QColor()
-        _color.setNamedColor("white")
-        for d in (QtCore.Qt.Saturday, QtCore.Qt.Sunday,):
+        for d in (Qt.Saturday, Qt.Sunday,):
             fmt = self.weekdayTextFormat(d)
-            fmt.setForeground(QtCore.Qt.white)
+            fmt.setForeground(Qt.white)
             self.setWeekdayTextFormat(d, fmt)
 
         self.events = {
