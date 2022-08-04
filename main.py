@@ -14,19 +14,15 @@ class MainWindow(QMainWindow):
         self.ui.setupUI(self)
         self.show()
         self.createCalendar()
+        self.create_habits_widget()
 
     def createCalendar(self):
-        length = 600
-        height = 400
-
         self.calendar = calendar.Scheduler(self)
-        self.calendar.setObjectName(u"calendarWidget")
-        self.calendar.setMinimumSize(QSize(length, height))
-        self.calendar.setMaximumSize(length, height)
-        self.calendar.setStyleSheet(open("StyleSheets/calendarStyle.css").read())
-        self.calendar.setGridVisible(True)
-
         self.ui.gridLayout.addWidget(self.calendar, 0, 0, 1, 1, Qt.AlignHCenter | Qt.AlignTop)
+
+    def create_habits_widget(self):
+        self.habits = QFrame(self)
+        self.ui.gridLayout.addWidget(self.habits, 0, 0, 1, 1, Qt.AlignHCenter | Qt.AlignBottom)
 
 
 def main():

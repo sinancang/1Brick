@@ -18,6 +18,15 @@ class Scheduler(QCalendarWidget):
             QDate(2023, 4, 6): ["Bengi's birthday"]
         }
 
+        length = 600
+        height = 400
+
+        self.setObjectName(u"calendarWidget")
+        self.setMinimumSize(length, height)
+        self.setMaximumSize(length, height)
+        self.setStyleSheet(open("StyleSheets/calendarStyle.css").read())
+        self.setGridVisible(True)
+
     def paintCell(self, painter, rect, date):
         super().paintCell(painter, rect, date)
         if date in self.events:
