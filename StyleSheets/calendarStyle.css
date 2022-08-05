@@ -149,8 +149,7 @@ QCalendarWidget QWidget {
 
 	border: 2px solid  #BC4A3C;
 	border-top: 0px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	border-bottom: 0px;
 }
 
 QTableView {

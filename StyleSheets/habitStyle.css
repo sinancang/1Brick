@@ -1,3 +1,21 @@
 QFrame QWidget {
     background-color: #ededed;
+    border: 2px solid  #BC4A3C;
+}
+
+#habitsWidget {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 2px solid black;
+}
+
+#habitsWidget QPushButton {
+    background-color: #BC4A3C;
+    font: Comic Sans;
+
+    border: 1px solid  #8c372c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }

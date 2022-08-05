@@ -1,8 +1,8 @@
-from PyQt5.QtCore import QDate, Qt, QPoint
+from PyQt5.QtCore import Qt, QDate, QPoint
 from PyQt5.QtWidgets import QCalendarWidget
 
 
-class Scheduler(QCalendarWidget):
+class BrickCalendar(QCalendarWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.initUI()
@@ -19,7 +19,7 @@ class Scheduler(QCalendarWidget):
         }
 
         length = 600
-        height = 400
+        height = 350
 
         self.setObjectName(u"calendarWidget")
         self.setMinimumSize(length, height)

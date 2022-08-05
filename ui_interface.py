@@ -1,5 +1,5 @@
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtCore import QCoreApplication, QMetaObject
+from PyQt5.QtWidgets import QVBoxLayout, QWidget, QScrollArea, QGridLayout
 
 
 class UI_MainWindow(object):
