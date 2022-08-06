@@ -20,10 +20,10 @@ class HabitsFrame(QFrame):
         self.createButton()
 
     def createButton(self):
-        self.button = QPushButton("Add", self)
+        self.button = QPushButton("Add habit", self)
         self.button.setObjectName("addButton")
-        self.button.resize(50, 35)
-        self.button.move(510, 30)
+        self.button.resize(75, 35)
+        self.button.move(500, 25)
         self.button.setStyleSheet("background-color: #BC4A3C;")
         self.button.clicked.connect(self.queryPopup)
         self.button.setFont(QFont('Arial', 15))

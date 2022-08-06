@@ -1,8 +1,8 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow
 
+from bottom import HabitsFrame
 from calendar import BrickCalendar
-from habits import HabitsFrame
 from ui_interface import UI_MainWindow
 
 
