@@ -99,7 +99,6 @@ class InputPopup(QWidget):
 
         jsonList = json.load(open("db/habitEntries.json"))
         jsonList.append(entry)
-        print(jsonList)
         with open("db/habitEntries.json", "w") as outfile:
             json.dump(jsonList, outfile, indent=4)
 

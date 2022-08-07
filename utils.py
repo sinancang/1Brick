@@ -17,3 +17,22 @@ def displayError(text):
     msg.setInformativeText(text)
     msg.setWindowTitle("Error")
     msg.exec_()
+
+
+def intToDayOfWeekStr(int):
+    if int == 1:
+        return "Mon"
+    elif int == 2:
+        return "Tue"
+    elif int == 3:
+        return "Wed"
+    elif int == 4:
+        return "Thu"
+    elif int == 5:
+        return "Fri"
+    elif int == 6:
+        return "Sat"
+    elif int == 7:
+        return "Sun"
+
+    raise ValueError

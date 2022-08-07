@@ -1,1 +1,38 @@
-[]
+[
+    {
+        "name": "Coding",
+        "days": {
+            "Mon": true,
+            "Tue": true,
+            "Wed": true,
+            "Thu": true,
+            "Fri": true,
+            "Sat": true,
+            "Sun": true
+        }
+    },
+    {
+        "name": "Basketball",
+        "days": {
+            "Mon": false,
+            "Tue": false,
+            "Wed": false,
+            "Thu": false,
+            "Fri": false,
+            "Sat": true,
+            "Sun": true
+        }
+    },
+    {
+        "name": "Chores",
+        "days": {
+            "Mon": false,
+            "Tue": false,
+            "Wed": false,
+            "Thu": false,
+            "Fri": false,
+            "Sat": true,
+            "Sun": false
+        }
+    }
+]

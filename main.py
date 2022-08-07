@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import *
 
-from main_window import MainWindow
+from mainWindow import MainWindow
 
 
 def main():

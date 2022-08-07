@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QMainWindow
 import utils
 from calendarWindow import BrickCalendar
 from habitsWindow import HabitsFrame
-from ui_interface import UI_MainWindow
+from uiInterface import UI_MainWindow
 
 
 class MainWindow(QMainWindow):
@@ -35,4 +35,9 @@ class MainWindow(QMainWindow):
             if utils.is_empty(f):
                 return
 
+            weekDay = utils.intToDayOfWeekStr(self.calendar.selectedDate().dayOfWeek())
+
             habitEntries = json.load(f)
+            for habitEntry in habitEntries:
+                if habitEntry['days'][weekDay]:
+                    self.habits.showHabitEntry(habitEntry['name'])

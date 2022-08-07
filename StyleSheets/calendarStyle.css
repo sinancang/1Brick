@@ -155,6 +155,9 @@ QCalendarWidget QWidget {
 QTableView {
     selection-background-color: #df877c;
 }
+QTableView::item:hover {
+    background-color: white;
+}
 
 QCalendarWidget QTableView QLabel
 {
