@@ -26,7 +26,6 @@ class HabitsFrame(QFrame):
         self.scrollArea.setObjectName("habitsScrollArea")
         self.scrollArea.move(25, 50)
         self.scrollArea.resize(550, 305)
-        self.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.scrollArea.setWidgetResizable(True)
 

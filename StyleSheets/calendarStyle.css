@@ -5,7 +5,7 @@ QCalendarWidget QWidget {
 /* style for top navigation area ###############################################*/
 
 #qt_calendar_navigationbar {
-    background-color: #fff;
+    background-color: white;
 	border: 2px solid  #BC4A3C;
 	border-bottom: 0px;
 	border-top-left-radius: 5px;

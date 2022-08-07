@@ -1,5 +1,10 @@
-QFrame QWidget {
-    background-color: white;
+#habitsScrollArea QWidget {
+    background-color: lightgray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid black;
 }
 
 #habitsWidget {
@@ -7,6 +12,7 @@ QFrame QWidget {
     border-bottom-right-radius: 5px;
     border-top: 2px solid black;
     border: 2px solid  #BC4A3C;
+    background-color: white;
 }
 
 #habitsWidget QPushButton {
