@@ -26,6 +26,7 @@ class BrickCalendar(QCalendarWidget):
         self.setMaximumSize(length, height)
         self.setStyleSheet(open("StyleSheets/calendarStyle.css").read())
         self.setGridVisible(True)
+        self.clicked.connect(self.parent().displayHabitEntries)
 
     def paintCell(self, painter, rect, date):
         super().paintCell(painter, rect, date)

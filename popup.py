@@ -1,6 +1,9 @@
 import json
+import time
 
 from PyQt5.QtWidgets import QWidget, QLineEdit, QPushButton, QLabel, QFormLayout, QCheckBox, QHBoxLayout
+
+import utils
 
 
 class InputPopup(QWidget):
@@ -80,13 +83,27 @@ class InputPopup(QWidget):
 
     def addHabitEntry(self, habitName):
         if not habitName:
-            # display error message instead
-            raise ValueError("Invalid value")
-        entry = {'name': habitName, 'days': self.checkedDays}
-        # load json, check if it's already there
-        # Append entry to json
-        print(json.dumps(entry))
+            utils.displayError("Please enter a valid habit name!")
+            return
 
+        atLeastOneChecked = False
+        for key in self.checkedDays:
+            if self.checkedDays[key]:
+                atLeastOneChecked = True
+
+        if not atLeastOneChecked:
+            utils.displayError("Please check at least one day of the week!")
+            return
+
+        entry = {'name': habitName, 'days': self.checkedDays}
+
+        jsonList = json.load(open("db/habitEntries.json"))
+        jsonList.append(entry)
+        print(jsonList)
+        with open("db/habitEntries.json", "w") as outfile:
+            json.dump(jsonList, outfile, indent=4)
+
+        time.sleep(0.20)  # Gives the impression of something happenning, LOL
         self.hide()
 
     def adjustCheckedDays(self, button):

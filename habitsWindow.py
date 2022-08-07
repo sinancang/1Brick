@@ -31,5 +31,5 @@ class HabitsFrame(QFrame):
     def queryPopup(self):
         self.query = InputPopup()
 
-    def addHabit(self):
-        habitEntry = '{ "date": "20220802", "habit": "Coding", "time": "1H" }'
+    def createHabitEntry(self):
+        print("Create habit entry & display it on the bottom window")

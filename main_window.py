@@ -1,8 +1,11 @@
+import json
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow
 
-from bottom import HabitsFrame
-from calendar import BrickCalendar
+import utils
+from calendarWindow import BrickCalendar
+from habitsWindow import HabitsFrame
 from ui_interface import UI_MainWindow
 
 
@@ -17,6 +20,7 @@ class MainWindow(QMainWindow):
 
         self.create_habits_widget()
         self.habits.lower()
+        self.displayHabitEntries()
 
     def createCalendar(self):
         self.calendar = BrickCalendar(self)
@@ -25,3 +29,10 @@ class MainWindow(QMainWindow):
     def create_habits_widget(self):
         self.habits = HabitsFrame(self)
         self.ui.gridLayout.addWidget(self.habits, 0, 0, 1, 1, Qt.AlignHCenter | Qt.AlignBottom)
+
+    def displayHabitEntries(self):
+        with open('db/habitEntries.json') as f:
+            if utils.is_empty(f):
+                return
+
+            habitEntries = json.load(f)
